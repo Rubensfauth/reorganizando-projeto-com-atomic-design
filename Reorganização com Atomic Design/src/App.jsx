@@ -1,6 +1,5 @@
-// src/App.jsx
 import React from "react";
-import ProductCard from "./components/ProductCard";
+import ProductCard from "./components/organisms/ProductCard/ProductCard";
 
 const App = () => {
   const sampleProducts = [
@@ -44,9 +43,10 @@ const App = () => {
           Loja de Produtos
         </h1>
         <p className="text-center text-gray-600 mb-8">
-          📦 Componente ProductCard simples - antes da reorganização
+          ⚛️ ProductCard reorganizado com <strong>Atomic Design</strong>
         </p>
 
+        {/* Grid de produtos usando o organismo ProductCard */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {sampleProducts.map((product) => (
             <ProductCard
@@ -57,26 +57,26 @@ const App = () => {
           ))}
         </div>
 
-        {/* Próximo passo */}
-        <div className="mt-12 max-w-2xl mx-auto bg-blue-50 border border-blue-200 rounded-lg p-6">
-          <h2 className="text-xl font-semibold text-blue-800 mb-4">
-            📋 Próximo passo: Reorganizar com Atomic Design
+        {/* Sucesso da reorganização */}
+        <div className="mt-12 max-w-2xl mx-auto bg-green-50 border border-green-200 rounded-lg p-6">
+          <h2 className="text-xl font-semibold text-green-800 mb-4">
+            ✅ Reorganização concluída com sucesso!
           </h2>
-          <p className="text-blue-700 mb-4">
-            Agora que temos o ProductCard funcionando, vamos reorganizar
-            criando:
-          </p>
-          <ul className="space-y-1 text-blue-700">
-            <li>
-              🔸 <strong>Átomos:</strong> Button, Text, Image
-            </li>
-            <li>
-              🔹 <strong>Moléculas:</strong> ProductHeader, PriceSection
-            </li>
-            <li>
-              🔷 <strong>Organismos:</strong> ProductCard refatorado
-            </li>
-          </ul>
+          <div className="text-green-700 space-y-2">
+            <p>
+              <strong>Átomos criados:</strong> Button, Text, Image
+            </p>
+            <p>
+              <strong>Moléculas criadas:</strong> ProductHeader, PriceSection
+            </p>
+            <p>
+              <strong>Organismo refatorado:</strong> ProductCard
+            </p>
+            <p className="mt-4 text-sm">
+              🎯 <strong>Resultado:</strong> Mesma funcionalidade, estrutura
+              mais organizada e componentes reutilizáveis!
+            </p>
+          </div>
         </div>
       </div>
     </div>
