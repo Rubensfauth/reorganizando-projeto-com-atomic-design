@@ -7,9 +7,9 @@ const Text = ({
   className = "",
 }) => {
   const variants = {
-    title: "text-xl font-bold text-gray-900 tracking-tight",
-    body: "text-gray-600 text-sm leading-relaxed",
-    price: "text-3xl font-bold text-emerald-600 tracking-wide",
+    title: "text-2xl font-bold text-gray-800",
+    body: "text-gray-600 text-sm",
+    price: "text-3xl font-bold text-green-500",
   };
 
   return (
