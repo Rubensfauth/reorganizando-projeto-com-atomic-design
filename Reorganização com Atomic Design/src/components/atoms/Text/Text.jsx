@@ -5,37 +5,15 @@ const Text = ({
   variant = "body",
   as: Component = "span",
   className = "",
-  style = {},
-  ...props
 }) => {
-  const styles = {
-    title: {
-      fontSize: "24px",
-      fontWeight: "bold",
-      color: "#1F2937",
-      marginBottom: "12px",
-      fontFamily: "inherit",
-    },
-    body: {
-      fontSize: "14px",
-      color: "#6B7280",
-      lineHeight: "1.6",
-      fontFamily: "inherit",
-    },
-    price: {
-      fontSize: "28px",
-      fontWeight: "bold",
-      color: "#059669",
-      fontFamily: "inherit",
-    },
+  const variants = {
+    title: "text-xl font-bold text-gray-800",
+    body: "text-gray-600 text-sm leading-relaxed",
+    price: "text-2xl font-bold text-green-600",
   };
 
   return (
-    <Component
-      style={{ ...styles[variant], ...style }}
-      className={className}
-      {...props}
-    >
+    <Component className={`${variants[variant]} ${className}`}>
       {children}
     </Component>
   );

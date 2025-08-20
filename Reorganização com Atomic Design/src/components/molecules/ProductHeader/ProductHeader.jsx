@@ -2,25 +2,12 @@ import React from "react";
 import Text from "../../atoms/Text/Text";
 
 const ProductHeader = ({ title, description }) => {
-  const headerStyle = {
-    marginBottom: "20px",
-  };
-
-  const titleStyle = {
-    display: "block",
-    marginBottom: "12px",
-  };
-
-  const descriptionStyle = {
-    display: "block",
-  };
-
   return (
-    <div style={headerStyle}>
-      <Text variant="title" as="h3" style={titleStyle}>
+    <div className="mb-6">
+      <Text variant="title" as="h3" className="mb-3 block">
         {title}
       </Text>
-      <Text variant="body" as="p" style={descriptionStyle}>
+      <Text variant="body" as="p" className="block">
         {description}
       </Text>
     </div>
